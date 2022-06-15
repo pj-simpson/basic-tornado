@@ -1,0 +1,18 @@
+<html>
+   <head>
+    <link rel="stylesheet" href="{{ static_url("main.css") }}">
+    <title>Tornado serving a Template</title>
+   </head>
+   <body>
+   <div id="header">
+       <h1>Domain Search</h1>
+   </div>
+   <div id="subheading" hidden>
+      {% module SubHeading(search_word) %}
+   </div>
+   <hr/>
+   {% for dom in domains %}
+        {% module Domain(dom) %}
+    {% end %}
+    </body>
+</html>

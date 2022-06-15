@@ -1,0 +1,18 @@
+#domains {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#domains td, #domains th {
+  border: 1px solid #000000;
+  padding: 8px;
+}
+
+#domains th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #70ffb6;
+  color: white;
+}

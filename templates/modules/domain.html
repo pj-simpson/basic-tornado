@@ -1,0 +1,15 @@
+<h3>{{ name }}</h3>
+<table id="domains">
+    <tr>
+        <th>Created Date</th>
+        <th>Expiry Date</th>
+    </tr>
+    <tr>
+        <td>
+            {{ created.strftime('%d-%m-%Y') }}
+        </td>
+        <td>
+            {{ updated.strftime('%d-%m-%Y') }}
+        </td>
+    </tr>
+</table>
