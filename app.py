@@ -45,6 +45,10 @@ class SubHeadingModule(tornado.web.UIModule):
     def embedded_javascript(self):
         return f'window.alert("The word searched was: " + "{self.word}");'
 
+class HomeHandler(tornado.web.RequestHandler):
+    def get(self):
+        self.write({"foo":"bar"})
+
 
 if __name__ == "__main__":
     tornado.options.parse_command_line()
@@ -55,6 +59,7 @@ if __name__ == "__main__":
     }
     app = tornado.web.Application(
         handlers=[
+            (r"/", HomeHandler),
             (r"/domains/(\w+)", DomainsHandler),
         ],
         **settings,
