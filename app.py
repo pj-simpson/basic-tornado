@@ -55,7 +55,7 @@ class HomeHandler(tornado.web.RequestHandler):
 if __name__ == "__main__":
     tornado.options.parse_command_line()
     settings = {
-        "template_path": "templates",
+        "template_path": os.path.join(os.path.dirname(__file__), "templates"),
         "static_path": os.path.join(os.path.dirname(__file__), "static"),
         "ui_modules": {"Domain": DomainModule, "SubHeading": SubHeadingModule},
     }
