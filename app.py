@@ -1,4 +1,6 @@
 import datetime
+import os
+
 import requests
 
 import tornado.ioloop
@@ -54,7 +56,7 @@ if __name__ == "__main__":
     tornado.options.parse_command_line()
     settings = {
         "template_path": "templates",
-        "static_path": "static",
+        "static_path": os.path.join(os.path.dirname(__file__), "static"),
         "ui_modules": {"Domain": DomainModule, "SubHeading": SubHeadingModule},
     }
     app = tornado.web.Application(
