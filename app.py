@@ -47,7 +47,7 @@ class SubHeadingModule(tornado.web.UIModule):
 
 class HomeHandler(tornado.web.RequestHandler):
     def get(self):
-        self.write({"foo":"bar"})
+        self.write({"You have been load balanced to the following port":options.port})
 
 
 if __name__ == "__main__":
